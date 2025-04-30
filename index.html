@@ -1,0 +1,143 @@
+<DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TakoyakIn</title>
+        <script src="https://unpkg.com/feather-icons"></script>     
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      
+          <!-- navbar section -->
+          <nav class="navbar">
+            
+                <div class="logo">
+                    <a href="#">TakoyakIn</a>
+                </div>
+                <div class="navbar-nav">
+    
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#contact">Contact</a>
+                    
+                </div>
+                <div class="navbar-extra">
+                    <a href="#"><i data-feather="search"></i></a>
+                    <a href="#" onclick="showCart()"><i data-feather="shopping-cart"></i></a>
+                    <a href="#" id="ham-menu"><i data-feather="menu"></i></a>
+                </div>
+        </nav>
+
+
+         <!-- home section -->
+            <section class="hero" id="home">
+             <main class="content">
+                <h1>Laper? <span>TakoyakIn</span> aja</h1>
+                <p>Rasakan Makanan Khas Jepang</p>
+             </main>
+            </section>
+
+            <section id="about" class="about">
+                <h2>About <span>Us</span></h2>
+
+                <div class="row">
+                    <div class="about-img">
+                        <img src="https://i.ibb.co.com/QX1s7NK/about-section.jpg" alt="about-section" border="0">
+                    </div>
+                    <div class="content">
+                        <h3>Kenapa memilih takoyaki kami</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas architecto similique nesciunt dolores doloribus ratione.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dolor illo perspiciatis, provident cupiditate ipsa.</p>
+                    </div>
+                </div>
+            </section>
+
+         <!--menu section-->
+            <main>
+            <section class="menu" id="menu">
+                <h2><span>Semua</span> Menu</h2>
+                <div class="menu-item">
+                    <img src="https://i.ibb.co.com/3hm3ycp/IMG-20241122-WA0031.jpg" alt="IMG-20241122-WA0031" border="0">
+                    <h3>Takoyaki Telur</h3>
+                    <p>Harga: Rp1.000</p>
+                    <button onclick="addToCart('Takoyaki Original', 1000)">Pesan Sekarang</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.ibb.co.com/pXDW328/IMG-20241122-WA0030.jpg" alt="IMG-20241122-WA0030" border="0">
+                    <h3>Takoyaki Keju</h3>
+                    <p>Harga: Rp1.000</p>
+                    <button onclick="addToCart('Takoyaki-Keju', 1000)">Pesan Sekarang</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://i.ibb.co.com/0njX6t6/IMG-20241122-WA0029.jpg" alt="IMG-20241122-WA0029" border="0">  
+                     <h3>Takoyaki Bakso</h3>
+                    <p>Harga: Rp.1.000</p>
+                    <button onclick="addToCart('Takoyaki-Pedas', 1000)">Pesan Sekarang</button>
+                </div>
+            </section>
+
+         <!--contact section-->
+            <section class="contact" id="contact">
+                <h2><span>Kontak</span> Kami</h2>
+
+                <div class="row">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.489466999504!2d106.7562394745362!3d-6.58591556437952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5457e0e3bcf%3A0x58481d58737539c0!2sSMK%20Negeri%201%20Ciomas!5e0!3m2!1sid!2sid!4v1732813326681!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+                
+                    <form action="">
+                        <div class="input-group">
+                            <i data-feather="user"></i>
+                            <input type="text" placeholder="nama"> 
+                        </div>
+                        <div class="input-group">
+                            <i data-feather="mail"></i>
+                            <input type="text" placeholder="email"> 
+                        </div>
+                        <div class="input-group">
+                            <i data-feather="phone"></i>
+                            <input type="text" placeholder="no hp"> 
+                        </div>
+                        <button type="submit" class="btn">kirim pesan</button>
+                    </form>
+                </div>
+            </section>
+            <!-- cart section -->
+    
+     <div id="cartModal" class="modal">
+     <div class="modal-content">
+     <span class="close" onclick="closeCart()">&times;</span>
+    
+     <h2>Keranjang Belanja</h2>
+    
+     <table id="cartTable">
+    
+     <thead>
+    
+     <tr>
+    
+     <th>Nama Barang</th>
+    
+     <th>Harga</th>
+    
+    <th>Aksi</th>
+    
+     </thead>
+    
+     <tbody id="cartBody">
+        
+     <!-- Item keranjang akan ditambahkan di sini -->
+     </tbody>
+     </table>
+     <button onclick="printReceipt()">Cetak Struk</button>
+     </div>
+     </div>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 Takoyaki_Yummy XPPLG3.</p>
+        </footer>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
